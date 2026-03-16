@@ -1,83 +1,72 @@
-# Unit 8 - Working with 2D Arrays in Java
+# Unit 8: 2D Array
+
+AP Computer Science A
 
 ## Overview
-In this unit, students will learn about 2D arrays, a data structure that stores objects in a grid or table-like format. You will practice creating, accessing, manipulating, and traversing 2D arrays using nested loops. Key tasks include calculating sums, counting occurrences, transposing arrays, reversing rows, and filling arrays with random values. Understanding how to work with 2D arrays is essential for solving complex problems that involve grids, tables, or matrices.
 
-## Learning Objectives
-- Understand the structure and usage of 2D arrays in Java.
-- Declare, create, and initialize 2D arrays.
-- Access and modify elements in a 2D array using row and column indices.
-- Traverse 2D arrays using nested loops.
-- Perform common operations on 2D arrays, such as summing, transposing, reversing rows, and counting occurrences.
-- Implement methods that manipulate 2D arrays without using external libraries.
-
-## Key Concepts
-- **2D Array**: An array that holds items in a grid, with rows and columns, like a table.
-- **Nested Loops**: A loop inside another loop, commonly used for traversing 2D arrays.
-- **Indexing**: Elements are accessed using two indices, the first for rows and the second for columns (e.g., `array[row][col]`).
-- **Transposition**: Switching the rows and columns of a 2D array.
-- **Row Reversal**: Reversing the order of rows in a 2D array.
-
-## Instructions for Students
-1. Implement the methods in `Unit8.java` to manipulate 2D arrays.
-2. **Do not use any external libraries** or methods like `Arrays.fill()` or `Collections.reverse()`. Use only basic loops and indexing.
-3. Write code to:
-   - Calculate the sum of elements in a 2D array.
-   - Count occurrences of a specific value in a 2D array.
-   - Find the maximum element in a 2D array.
-   - Reverse the rows in a 2D array.
-   - Transpose a 2D array.
-   - Fill a 2D array with random integers.
-
-## Assignment
-Complete the following methods in `Unit8.java`:
-1. **sumOfElements**: Calculate and return the sum of all elements in the 2D array.
-2. **countOccurrences**: Count and return the number of times a specified value appears in the 2D array.
-3. **findMax**: Traverse the array to find and return the maximum element.
-4. **reverseRows**: Reverse the rows of the 2D array in place.
-5. **transpose**: Create and return a new 2D array that is the transpose of the original.
-6. **fillWithRandom**: Fill a 2D array with random integers between `min` and `max`.
-
-## JUnit Tests Description and Points
-
-1. **Test Sum of Elements (15 points)**  
-   Verifies that the method correctly calculates the sum of all elements in 3x3, 5x5, and 6x4 2D arrays.
-
-2. **Test Count Occurrences (15 points)**  
-   Ensures that the method correctly counts how many times a specific value appears in various 2D arrays.
-
-3. **Test Find Max (15 points)**  
-   Checks that the method accurately identifies the largest value in a 2D array.
-
-4. **Test Reverse Rows (15 points)**  
-   Verifies that the rows in the array are reversed correctly for arrays of different sizes.
-
-5. **Test Transpose (20 points)**  
-   Ensures that the method correctly transposes the rows and columns in a 2D array.
-
-6. **Test Fill With Random (20 points)**  
-   Ensures the method generates a 2D array of the specified size filled with random integers between the specified range.
+This project covers **Unit 8: 2D Array** concepts including 2D array declaration, nested loop traversal, row/column operations, and common algorithms. Implement the 6 methods in `Unit8.java` and run the provided JUnit tests to verify your work.
 
 ## Getting Started
-1. Clone the repository containing the Unit 8 project.
-2. Open the project in your preferred IDE (such as IntelliJ IDEA or Eclipse).
-3. Navigate to `Unit8.java` and implement the required methods.
-4. Run the JUnit tests in `Unit8Test.java` to verify your implementations.
-5. Ensure all tests pass before submitting your code.
 
-## Submission
-Submit your completed `Unit8.java` file through the course's designated submission platform by the due date. Ensure that all tests pass and your code adheres to the style guidelines provided in class.
+### Option 1: GitHub Codespaces (Recommended)
 
-## Resources
-- [Java Documentation](https://docs.oracle.com/javase/8/docs/api/)
-- [JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
-- [Java 2D Array Tutorial](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
+1. Click the green **Code** button on this repository
+2. Select the **Codespaces** tab
+3. Click **Create codespace on main**
+4. Wait for the environment to build (~2 minutes the first time)
+5. Start coding in `src/main/java/com/csplusplus/Unit8.java`
 
-## Support
-If you encounter any issues or have questions about the assignment, please reach out during office hours or post in the course discussion forum.
+> **Note:** If the Java extension shows errors on first load, press `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows) and run **"Developer: Reload Window"**. This is a one-time setup step.
 
-For additional assistance, contact: **Kevin** at [kevin@csplusplus.com](mailto:kevin@csplusplus.com).
+### Option 2: Local Development
 
----
+1. Accept the assignment via the GitHub Classroom link
+2. Clone the repository using GitHub Desktop
+3. Open the project in your IDE (VS Code, IntelliJ, or Eclipse)
+4. **Requirements:** Java 17+, Maven 3.x
 
-**Unit 8 - Working with 2D Arrays in Java** is part of the AP Computer Science A course, designed to build proficiency in handling complex data structures and grid-based problems.
+## Running Tests
+
+### In VS Code / Codespaces
+
+Click the green play button next to any test method in `Unit8Test.java`, or open the **Testing** sidebar (beaker icon).
+
+### Command Line
+
+Run all tests:
+```
+mvn test
+```
+
+Run a single method's tests:
+```
+mvn -Dtest=Unit8Test#testSumOfElements test
+```
+
+## Scoring
+
+| # | Method | Points | Concepts |
+|---|--------|--------|----------|
+| 1 | `sumOfElements(int[][])` | 15 | Nested loops, accumulator |
+| 2 | `countOccurrences(int[][], int)` | 15 | Nested traversal, counting |
+| 3 | `findMax(int[][])` | 15 | Nested traversal, tracking max |
+| 4 | `reverseRows(int[][])` | 15 | Row swapping |
+| 5 | `transpose(int[][])` | 20 | New array creation, row/column swap |
+| 6 | `fillWithRandom(int, int, int, int)` | 20 | Array creation, `Math.random()` |
+| | **Total** | **100** | |
+
+## Common Mistakes
+
+- Using `array.length` for columns instead of `array[0].length`
+- Confusing row and column indices in nested loops
+- Initializing max to 0 instead of `array[0][0]` (fails with all-negative arrays)
+- Forgetting that transpose changes dimensions (2x4 becomes 4x2)
+- Off-by-one errors in the random range formula
+
+## Autograding
+
+Your code is automatically graded when you push to GitHub. Check the **Actions** tab to see your score. Each method is tested independently — you earn points for each method you complete correctly.
+
+## Contact
+
+For questions, contact [kevin@csplusplus.com](mailto:kevin@csplusplus.com)
