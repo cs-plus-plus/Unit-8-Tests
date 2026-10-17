@@ -20,7 +20,7 @@ jobs:
         distribution: 'temurin'
     - name: 'testSumOfElements '
       id: testsumofelements
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: cs-plus-plus/autograding-command-grader@v1
       with:
         test-name: 'testSumOfElements '
         setup-command: mvn compile
@@ -29,7 +29,7 @@ jobs:
         max-score: 15
     - name: 'testCountOccurrences '
       id: testcountoccurrences
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: cs-plus-plus/autograding-command-grader@v1
       with:
         test-name: 'testCountOccurrences '
         setup-command: mvn compile
@@ -38,7 +38,7 @@ jobs:
         max-score: 15
     - name: 'testFindMax '
       id: testfindmax
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: cs-plus-plus/autograding-command-grader@v1
       with:
         test-name: 'testFindMax '
         setup-command: mvn compile
@@ -47,7 +47,7 @@ jobs:
         max-score: 15
     - name: 'testReverseRows '
       id: testreverserows
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: cs-plus-plus/autograding-command-grader@v1
       with:
         test-name: 'testReverseRows '
         setup-command: mvn compile
@@ -56,7 +56,7 @@ jobs:
         max-score: 15
     - name: 'testTranspose '
       id: testtranspose
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: cs-plus-plus/autograding-command-grader@v1
       with:
         test-name: 'testTranspose '
         setup-command: mvn compile
@@ -65,7 +65,7 @@ jobs:
         max-score: 20
     - name: 'testFillWithRandom '
       id: testfillwithrandom
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: cs-plus-plus/autograding-command-grader@v1
       with:
         test-name: 'testFillWithRandom '
         setup-command: mvn compile
@@ -73,7 +73,7 @@ jobs:
         timeout: 3
         max-score: 20
     - name: Autograding Reporter
-      uses: classroom-resources/autograding-grading-reporter@v1
+      uses: cs-plus-plus/autograding-grading-reporter@v1
       env:
         TESTSUMOFELEMENTS_RESULTS: "${{steps.testsumofelements.outputs.result}}"
         TESTCOUNTOCCURRENCES_RESULTS: "${{steps.testcountoccurrences.outputs.result}}"
